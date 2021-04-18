@@ -30,9 +30,17 @@ def login():
 def about():
     return render_template ('about.html', title= 'About')
 
+@app.route('/contactus')
+def contactus():
+    return render_template ('contact_us.html', title= 'About')
+
 @app.route('/signup')
 def signup():
     return render_template ('sign_up.html', posts = posts)
+
+@app.route('/upload')
+def upload():
+    return render_template ('upload.html', title= 'About')
 
 if __name__ == '__main__':
     app.run(debug=True)
